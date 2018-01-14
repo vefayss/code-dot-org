@@ -218,7 +218,7 @@ namespace :test do
         ],
         ignore: ['dashboard/test/ui/**/*']
       ) do
-        TestRunUtils.run_dashboard_tests(parallel: true, parallelism: 8)
+        TestRunUtils.run_dashboard_tests(parallel: true, parallelism: 4)
       end
     end
 
