@@ -39,7 +39,10 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        if ENV['CI']
+        if ENV['CIRCLECI']
+          RakeUtils.rake 'parallel:rake[db:create,8]'
+          RakeUtils.rake 'parallel:rake[db:test:prepare,8]'
+        elsif ENV['CI']
           # Prepare for dashboard unit tests to run. We can't seed UI test data
           # yet because doing so would break unit tests.
           RakeUtils.rake 'db:create db:test:prepare'
