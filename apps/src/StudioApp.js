@@ -1470,6 +1470,9 @@ StudioApp.prototype.displayFeedback = function (options) {
 
       this.onFeedback(options);
       return;
+    } else {
+      console.warn('Unexpected feedback props:');
+      console.warn(otherOptions);
     }
   }
   options.onContinue = this.onContinue;
