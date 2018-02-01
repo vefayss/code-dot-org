@@ -128,9 +128,9 @@ export class DetailViewContents extends React.Component {
     });
   };
 
-  handleSelectedWorkshopChange = (event) => {
+  handleSelectedWorkshopChange = (selection) => {
     this.setState({
-      pd_workshop_id: event.value
+      pd_workshop_id: selection ? selection.value : null
     });
   };
 
@@ -336,52 +336,68 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  renderTopSection = () => {
-    const fitWorkshopLink = (
-      <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
-    );
-    const pdWorkshopLink = (
-      <a href={this.props.applicationData.pd_workshop_url} target="_blank">see workshop</a>
-    );
+  renderTopSection = () => (
+    <div id="TopSection">
+      <DetailViewResponse
+        question="Email"
+        answer={this.props.applicationData.email}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="School Name"
+        answer={this.props.applicationData.school_name}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="District Name"
+        answer={this.props.applicationData.district_name}
+        layout="lineItem"
+      />
+      {this.props.applicationData.pd_workshop_name &&
+        this.renderAssignedSummerWorkshop()
+      }
+      {this.props.applicationData.application_type === 'Facilitator' &&
+        this.renderAssignedFitWorkshop()
+      }
+      {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
+    </div>
+  );
+
+  renderAssignedSummerWorkshop() {
+    const pdWorkshopLink = this.props.applicationData.pd_workshop_url
+      ? <a href={this.props.applicationData.pd_workshop_url} target="_blank">see workshop</a>
+      : <span>Unassigned</span>;
+
     return (
-      <div id="TopSection">
-        <DetailViewResponse
-          question="Email"
-          answer={this.props.applicationData.email}
-          layout="lineItem"
-        />
-        <DetailViewResponse
-          question="School Name"
-          answer={this.props.applicationData.school_name}
-          layout="lineItem"
-        />
-        <DetailViewResponse
-          question="District Name"
-          answer={this.props.applicationData.district_name}
-          layout="lineItem"
-        />
-        {this.props.applicationData.pd_workshop_name &&
-          <DetailViewResponse
-            question="Summer Workshop"
-            answer={<span>
-              {this.props.applicationData.pd_workshop_name} ({pdWorkshopLink})
-            </span>}
-            layout="lineItem"
-          />
+      <DetailViewResponse
+        question="Summer Workshop"
+        answer={
+          <span>
+            {this.props.applicationData.pd_workshop_name} ({pdWorkshopLink})
+          </span>
         }
-        {this.props.applicationData.application_type === 'Facilitator' &&
-          <DetailViewResponse
-            question="FIT Workshop"
-            answer={<span>
-              {this.props.applicationData.fit_workshop_name} ({fitWorkshopLink})
-            </span>}
-            layout="lineItem"
-          />
-        }
-        {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
-      </div>
+        layout="lineItem"
+      />
     );
-  };
+  }
+
+  renderAssignedFitWorkshop() {
+    const fitWorkshopLink = this.props.applicationData.fit_workshop_url
+      ? <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
+      : <span>Unassigned</span>;
+
+    return (
+      <DetailViewResponse
+        question="FIT Workshop"
+        answer={
+          <span>
+            {this.props.applicationData.fit_workshop_name} ({fitWorkshopLink})
+          </span>
+        }
+        layout="lineItem"
+      />
+    );
+  }
 
   renderQuestions = () => {
     return (

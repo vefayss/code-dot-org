@@ -1,0 +1,49 @@
+# Logfile created on 2018-02-01 13:27:26 -0800 by logger.rb/47272
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Starting the New Relic agent in "development" environment.
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] WARN : No configuration file found. Working directory = /Users/andrew/Code/code-dot-org/bin/oneoff
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] WARN : Looked in these locations (based on defaults): /Users/andrew/Code/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/andrew/Code/code-dot-org/bin/oneoff/newrelic.yml, /Users/andrew/Code/code-dot-org/dashboard/config/newrelic.yml, /Users/andrew/Code/code-dot-org/dashboard/newrelic.yml, /Users/andrew/.newrelic/newrelic.yml, /Users/andrew/newrelic.yml
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Environment: development
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Dispatcher: webrick
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Application: development
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing ActiveRecord 4+ instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Sinatra instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Redis Instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Memcache instrumentation for dalli gem
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Sequel instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Rails 3+ middleware instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Net instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing HTTPClient instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing deferred Rack::Builder instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Rack::Builder middleware instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing ActiveJob instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Rails 5 Controller instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Rails 5 view instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Installing Rails 5 Action Cable instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Finished instrumentation
+[2018-02-01 13:27:26 -0800 Andrews-MacBook-Pro.local (28848)] INFO : Doing deferred dependency-detection before Rack startup
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Starting the New Relic agent in "development" environment.
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] WARN : No configuration file found. Working directory = /Users/andrew/Code/code-dot-org/bin/oneoff
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] WARN : Looked in these locations (based on defaults): /Users/andrew/Code/code-dot-org/bin/oneoff/config/newrelic.yml, /Users/andrew/Code/code-dot-org/bin/oneoff/newrelic.yml, /Users/andrew/Code/code-dot-org/dashboard/config/newrelic.yml, /Users/andrew/Code/code-dot-org/dashboard/newrelic.yml, /Users/andrew/.newrelic/newrelic.yml, /Users/andrew/newrelic.yml
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Environment: development
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Dispatcher: webrick
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Application: development
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing ActiveRecord 4+ instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Sinatra instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Redis Instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Memcache instrumentation for dalli gem
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Sequel instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Rails 3+ middleware instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Net instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing HTTPClient instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing deferred Rack::Builder instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Rack::Builder middleware instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing ActiveJob instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Rails 5 Controller instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Rails 5 view instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Installing Rails 5 Action Cable instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Finished instrumentation
+[2018-02-01 13:28:38 -0800 Andrews-MacBook-Pro.local (29005)] INFO : Doing deferred dependency-detection before Rack startup
