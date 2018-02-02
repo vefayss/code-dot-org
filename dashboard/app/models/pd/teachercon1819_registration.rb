@@ -155,7 +155,10 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
     if pd_application.application_type === "Teacher"
       requireds.concat [
-        :teacher_accept_seat
+        :teacher_accept_seat,
+        :how_many_hours,
+        :how_many_terms,
+        :grading_system
       ]
 
       if pd_application.course === "csp"
@@ -163,13 +166,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
           :how_offer_csp,
           :have_taught_ap,
           :have_taught_written_project_course,
-          :grading_system,
-          :how_many_terms
-        ]
-      elsif pd_application.course === "csd"
-        requireds.concat [
-          :how_many_hours,
-          :how_many_terms,
         ]
       end
     else
